@@ -48,8 +48,11 @@
             <field name="view_mode">form</field>
             <field name="target">inline</field>
         </record>
-        <menuitem id="menu_runbot_configuration" name="Runbot" parent="base.menu_config"
-            sequence="19" action="action_runbot_configuration"/>
+
+        <menuitem id="menu_runbot_configuration" name="Runbot Admin" sequence="11"
+            groups="base.group_configuration"/>
+        <menuitem id="menu_runbot_global_configuration" parent="menu_runbot_configuration"
+            sequence="100" action="action_runbot_configuration" name="Configuration"/>
 
     </data>
 </openerp>
